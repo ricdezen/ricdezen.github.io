@@ -1,5 +1,5 @@
 <nav class="social">
     {% for item in site.data.social.social %}
-    <a href="{{ item.url | absolute_url}}">{{ item.name }}</a>
+    <a class="fa fa-{{ item.name | downcase }}" href="{{ item.url | absolute_url}}"></a>
     {% endfor %}
 </nav>

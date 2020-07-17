@@ -113,9 +113,26 @@ a {
 
 /* Social */
 
-.social a {
+.social {
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa {
+    border-radius:50%;
+    padding: 16px;
+    text-align: center;
     text-decoration: none;
     color: var(--text-color);
+}
+
+.fa:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+.fa-linkedin {
+    color: cornflowerblue;
 }
 
 /* Miscellaneous */
