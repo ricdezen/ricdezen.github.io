@@ -56,6 +56,7 @@ a {
 }
 
 .navbutton {
+    transition: background-color 0.25s, box-shadow 0.25s;
     background-color: transparent;
     padding: 12px;
     font-size: 16px;
@@ -77,8 +78,10 @@ a {
 }
   
 .dropdown-content {
+    transition: visibility 0.25s, opacity 0.25s;
     border-radius: 0px 10px 10px 10px;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -99,7 +102,8 @@ a {
   
 .dropdown:hover .dropdown-content {
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
-    display: block;
+    visibility: visible;
+    opacity: 100%;
 }
 
 .dropdown:hover .navbutton {
@@ -119,6 +123,7 @@ a {
 }
 
 .fa {
+    transition: background-color 0.25s, box-shadow 0.25s;
     border-radius:50%;
     padding: 16px;
     text-align: center;
