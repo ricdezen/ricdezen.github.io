@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+
 :root {
     --main-width : 550px;
     --text-color : black;
@@ -10,15 +13,26 @@ a {
 }
 
 .content {
+    font-family: 'Roboto', sans-serif;
     max-width: var(--main-width);
     margin: auto;
+}
+
+.cursor_icon {
+    position: relative;
+    width: 16px;
+    height: 12px;
+    top: 4px;
+    left: -16px;
 }
 
 /* Main title */
 
 .main_title {
+    font-family: 'Ubuntu Mono', monospace;
     margin: auto;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -85,13 +99,13 @@ a {
 }
   
 .dropdown:hover .dropdown-content {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
     display: block;
 }
 
 .dropdown:hover .navbutton {
     background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown:hover .navbutton a {

@@ -1,10 +1,9 @@
-{% if site.data.settings.two_part_title.enabled %}
 <h1 class="main_title">
+    {% if site.data.settings.two_part_title.enabled %}
     <span style="color: black;">{{ site.data.settings.two_part_title.first }}</span>
     <span style="color: green;">{{ site.data.settings.two_part_title.second }}</span>
-</h1>
-{% else %}
-<h1 class="main_title">
+    {% else %}
     <span style="color: black;">{{ site.title }}</span>
+    {% endif %}
+    <img class="cursor_icon" src="assets/cursor.gif" />
 </h1>
-{% endif %}
