@@ -1,0 +1,5 @@
+# Whether to split the site title in two parts or not.
+two_part_title:
+  enabled: true
+  first: Riccardo
+  second: De Zen

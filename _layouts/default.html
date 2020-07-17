@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="/css/default.css">
+</head>
+
+<body>
+    <div class="content">
+        {% include header.html %}
+        <section>
+            {{ content }}
+        </section>
+        {% include footer.html %}
+    </div>
+</body>
+
+</html>

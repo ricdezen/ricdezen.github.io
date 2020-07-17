@@ -1,0 +1,10 @@
+{% if site.data.settings.two_part_title.enabled %}
+<h1 class="main_title">
+    <span style="color: black;">{{ site.data.settings.two_part_title.first }}</span>
+    <span style="color: green;">{{ site.data.settings.two_part_title.second }}</span>
+</h1>
+{% else %}
+<h1 class="main_title">
+    <span style="color: black;">{{ site.title }}</span>
+</h1>
+{% endif %}

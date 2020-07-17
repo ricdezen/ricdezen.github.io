@@ -1,0 +1,14 @@
+# Site settings
+title: Riccardo De Zen
+description: "Computer Engineering Student"
+
+# Actual base url of the website
+url: "https://ricdezen.github.io"
+# Base url
+baseurl: "/"
+
+# Author information
+author:
+  name: "Riccardo De Zen"
+  email: "riccardodezen98@gmail.com"
+  url: "https://ricdezen.github.io"
