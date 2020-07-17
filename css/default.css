@@ -18,17 +18,16 @@ a {
     margin: auto;
 }
 
-.cursor_icon {
+.cursor-icon {
     position: relative;
     width: 16px;
-    height: 12px;
+    height: 8px;
     top: 4px;
-    left: -16px;
 }
 
 /* Main title */
 
-.main_title {
+.main-title {
     font-family: 'Ubuntu Mono', monospace;
     margin: auto;
     padding-top: 10px;
@@ -39,7 +38,7 @@ a {
     color: var(--text-color);
 }
 
-.main_title a {
+.main-title a {
     text-decoration: none;
 }
 
@@ -69,11 +68,11 @@ a {
     color: var(--text-color);
 }
 
-.full_rounded {
+.full-rounded {
     border-radius: 10px 10px 10px 10px;
 }
 
-.submenu_button {
+.submenu-button {
     border-radius: 10px 10px 0px 0px;
 }
   

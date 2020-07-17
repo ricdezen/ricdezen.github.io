@@ -1,6 +1,6 @@
 <!-- Title -->
-{% include main_title.html %}
+{% if site.data.settings.main_title.enabled %}{% include main_title.html %}{% endif %}
 <!-- Navbar -->
-{% include navbar.html %}
+{% if site.data.settings.navbar.enabled %}{% include navbar.html %}{% endif %}
 <!-- Socials -->
-{% include social.html %}
+{% if site.data.settings.social.enabled %}{% include social.html %}{% endif %}

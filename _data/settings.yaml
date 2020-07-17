@@ -1,5 +1,17 @@
+# Whether to show the main title of the site at the top of a page.
+main_title:
+  enabled: true
+
 # Whether to split the site title in two parts or not.
 two_part_title:
   enabled: true
   first: Riccardo
   second: De Zen
+
+# Navigation bar. Takes the pages in `pages.yaml` and makes the links.
+navbar:
+  enabled: true
+
+# Social icons bar. Takes the icons in `social.yaml` and creates the links.
+social:
+  enabled: true
