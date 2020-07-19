@@ -8,7 +8,7 @@
     --color-primary : green;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .content {
         min-width: 100%;
         max-width: 100%;
