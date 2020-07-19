@@ -13,7 +13,16 @@
         min-width: 100%;
         max-width: 100%;
         background-color: pink;
+        margin: 0px;
         width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .content {
+        min-width: var(--min-page-width);
+        max-width: var(--max-page-width);
+        margin: auto;
     }
 }
 
@@ -24,9 +33,6 @@ a {
 
 .content {
     font-family: 'Roboto', sans-serif;
-    min-width: var(--min-page-width);
-    max-width: var(--max-page-width);
-    margin: auto;
     font-size: 16px;
 }
 
