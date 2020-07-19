@@ -16,6 +16,11 @@ a {
     font-family: 'Roboto', sans-serif;
     max-width: var(--main-width);
     margin: auto;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px
 }
 
 .cursor-icon {
