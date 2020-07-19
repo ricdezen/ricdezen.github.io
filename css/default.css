@@ -150,10 +150,10 @@ h1 {
 /* Miscellaneous */
 
 @media screen and (max-width: 800px) {
-  .content {
-      min-width: 100%;
-      max-width: 100%;
-
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
+    .content {
+        min-width: 100%;
+        max-width: 100%;
+        color: pink;
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
 }
