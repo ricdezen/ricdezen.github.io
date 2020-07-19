@@ -153,7 +153,7 @@ h1 {
     .content {
         min-width: 100%;
         max-width: 100%;
-        color: pink;
+        background-color: pink;
         width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
 }
