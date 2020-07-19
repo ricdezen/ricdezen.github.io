@@ -149,7 +149,7 @@ h1 {
 
 /* Miscellaneous */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 2000px) {
     .content {
         min-width: 100%;
         max-width: 100%;
