@@ -8,10 +8,15 @@
     --color-primary : green;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .content {
-        background-color: pink;
+        min-width: 80vw;
+        max-width: 80vw;
         width: 80vw;
+    }
+
+    .main-title {
+        font-size: 7vw;
     }
 }
 
@@ -140,6 +145,7 @@ h1 {
     transition: background-color 0.25s, box-shadow 0.25s;
     border-radius:50%;
     padding: 16px;
+    font-size: 30px;
     text-align: center;
     text-decoration: none;
     color: var(--text-color);
