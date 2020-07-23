@@ -1,11 +1,7 @@
 pages:
   - name: "About"
     url: "about.html"
-  - name: "Contact"
-    url: "contact.html"
-  - name: "Archive"
-    url: "archive.html"
-    sub:
-      - name: "By subject"
-      - name: "For students"
-      - name: "Projects"
+  - name: "Blog"
+    url: "blog.html"
+  - name: "Projects"
+    url: "projects.html"
