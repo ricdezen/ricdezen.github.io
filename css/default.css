@@ -184,6 +184,7 @@ h1 {
 .propic-container {
     width: auto;
     float: left;
+    position: relative;
     text-align: center;
 }
 
