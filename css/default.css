@@ -4,6 +4,7 @@
 @import "propic.css";
 @import "social.css";
 @import "blog.css";
+@import "projects.css";
 
 @media screen and (max-width: 800px) {
     body {
