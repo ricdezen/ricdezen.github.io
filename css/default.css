@@ -210,6 +210,10 @@ h1 {
     position: relative;
 }
 
+.event fieldset {
+    border: 1px solid var(--social-icon-color);
+}
+
 .event:after {
     content: "";
     position: absolute;
