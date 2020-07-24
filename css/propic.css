@@ -1,0 +1,26 @@
+@import "const.css";
+
+.about-container {
+    width: 100%;
+    min-height: 200px;
+}
+
+.propic-container {
+    width: auto;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.propic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .propic-container {
+        width: 100%;
+    }
+}
