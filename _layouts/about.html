@@ -13,6 +13,14 @@ layout: default
 </div>
 <div class="timeline-container">
     <h1>Timeline</h1>
+    <ul class="timeline">
+        {% for event in site.data.roadmap.roadmap %}
+        <li class="event">
+            <i>{{ event.date }}</i><br>
+            {{ event.event }}
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 <div class="skills-container">
     <h1>Skills</h1>
