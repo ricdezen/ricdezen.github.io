@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
-
 @import "const.css";
 @import "navbar.css";
 @import "timeline.css";
 @import "propic.css";
 @import "social.css";
+@import "blog.css";
 
 @media screen and (max-width: 800px) {
     body {

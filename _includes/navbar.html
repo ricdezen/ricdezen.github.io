@@ -1,9 +1,11 @@
 <nav class="navbar">
     {% for item in site.data.pages.pages %}
     <div class="dropdown">
+        <a class="navlink" href="{{ item.url | relative_url}}">
         <button class="navbutton {% if item.sub %}submenu-button{% else %}full-rounded{% endif %}">
-            <a class="navlink" href="{{ item.url | relative_url}}">{{ item.name }}</a>
+            {{ item.name }}
         </button>
+        </a>
         {% if item.sub %}
         <div class="dropdown-content">
             {% for s in item.sub %}
