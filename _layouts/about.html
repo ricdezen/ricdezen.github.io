@@ -16,8 +16,10 @@ layout: default
     <ul class="timeline">
         {% for event in site.data.roadmap.roadmap %}
         <li class="event">
-            <i>{{ event.date }}</i><br>
-            {{ event.event }}
+            <fieldset>
+                <legend><i>{{ event.date }}</i></legend>
+                {{ event.event }}
+            </fieldset>
         </li>
         {% endfor %}
     </ul>
