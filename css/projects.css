@@ -1,6 +1,19 @@
 @import "const.css";
 
+.proj-ph-container {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 100%;
+    padding-top: 56.25%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+  }
+
 .proj-placeholder {
-    width: 480px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
