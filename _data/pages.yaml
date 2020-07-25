@@ -1,7 +1,7 @@
 pages:
   - name: "About"
-    url: "about.html"
+    url: "/about.html"
   - name: "Blog"
-    url: "blog.html"
+    url: "/blog.html"
   - name: "Projects"
-    url: "projects.html"
+    url: "/projects.html"

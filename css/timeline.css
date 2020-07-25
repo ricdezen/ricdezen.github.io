@@ -16,7 +16,7 @@
 }
 
 .event fieldset {
-    border: 1px solid var(--social-icon-color);
+    border: 1px solid var(--double-hover-bg);
 }
 
 .event:after {
