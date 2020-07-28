@@ -8,11 +8,73 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 1px;
-    padding-bottom: 1px;
+    padding-bottom: 16px;
     color: var(--text-color);
 }
 
 .post-container:hover {
+    background-color: var(--hover-bg);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+.post-excerpt a {
+    color: var(--text-color);
+}
+
+.post-date {
+    font-style: italic;
+    color: var(--social-icon-color);
+}
+
+.keep-reading {
+    font-style: italic;
+    color: var(--social-icon-color);
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
+}
+
+.page-container {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.page-container a {
+    color: var(--text-color);
+}
+
+.page-container:hover a {
+    color: var(--color-primary);
+}
+
+.current-page {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.page {
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.page:hover {
     background-color: var(--hover-bg);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
 }

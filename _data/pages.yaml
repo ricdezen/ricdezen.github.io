@@ -2,6 +2,6 @@ pages:
   - name: "About"
     url: "/about.html"
   - name: "Blog"
-    url: "/blog.html"
+    url: "/blog/index.html"
   - name: "Projects"
     url: "/projects.html"

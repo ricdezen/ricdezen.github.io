@@ -1,0 +1,55 @@
+---
+title: Blog
+layout: default
+---
+{% for post in paginator.posts %}
+<a href="{{ post.url }}">
+    <div class="post-container">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-date">{{ post.date | date_to_long_string }}</div>
+        <div class="post-excerpt">{{ post.excerpt }}</div>
+        <div class="keep-reading">...</div>
+    </div>
+</a>
+{% endfor %}
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <div class="page-container">
+        <a href="{{ paginator.previous_page_path | relative_url }}">
+            <div class="page">&laquo;</div>
+        </a>
+    </div>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <div class="page-container">
+        <div class="current-page">{{ page }}</div>
+    </div>
+    {% elsif page == 1 %}
+    <div class="page-container">
+        <a href="{{ '/blog/index.html' | relative_url }}">
+            <div class="page">{{ page }}</div>
+        </a>
+    </div>
+    {% else %}
+    <div class="page-container">
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
+            <div class="page">{{ page }}</div>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <div class="page-container">
+        <a href="{{ paginator.next_page_path | relative_url }}">
+            <div class="page">&raquo;</div>
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
