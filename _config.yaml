@@ -13,5 +13,9 @@ author:
   email: "riccardodezen98@gmail.com"
   url: "https://ricdezen.github.io"
 
+# Pagination
 paginate: 5
 paginate_path: "/blog/page:num/"
+
+# Markdown
+markdown: kramdown

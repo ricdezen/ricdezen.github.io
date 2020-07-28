@@ -5,6 +5,7 @@
 @import "social.css";
 @import "blog.css";
 @import "projects.css";
+@import "syntax.css";
 
 a {
     text-decoration: none;
