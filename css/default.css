@@ -6,25 +6,13 @@
 @import "blog.css";
 @import "projects.css";
 
-@media screen and (max-width: 800px) {
-    body {
-        min-width: 80vw;
-        max-width: 80vw;
-        width: 80vw;
-    }
-
-    .main-title {
-        font-size: 7vw;
-    }
-}
-
 a {
     text-decoration: none;
     color: var(--color-primary);
 }
 
 body {
-    width: 750px;
+    width: 640px;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Roboto', sans-serif;
@@ -32,7 +20,27 @@ body {
 }
 
 h1 {
-    font-size: 32px
+    font-size: 40px
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
 }
 
 .cursor-icon {
@@ -52,13 +60,50 @@ h1 {
     width: 100%;
     overflow: hidden;
     text-align: center;
-    color: var(--text-color);
 }
 
 .main-title a {
     text-decoration: none;
+    color: var(--text-color);
 }
 
-/* Miscellaneous */
+/* Mobile */
 
+@media screen and (max-width: 800px) {
+    body {
+        min-width: 80vw;
+        max-width: 80vw;
+        width: 80vw;
+        font-size: 4vw;
+    }
 
+    .cursor-icon {
+        width: 2.5vw;
+        height: 1.25vw;
+        top: 2px;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 4.8vw;
+    }
+
+    h3 {
+        font-size: 4.6vw;
+    }
+
+    h4 {
+        font-size: 4.4vw;
+    }
+
+    h5 {
+        font-size: 4.2vw;
+    }
+
+    h6 {
+        font-size: 4vw;
+    }
+}
