@@ -82,7 +82,7 @@ function update() {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-    document.getElementById("left").innerHTML = remaining + " remaining.";
+    document.getElementById("left").innerHTML = (remaining - offSet) + " remaining.";
 
     if (remaining == 0)
         clearInterval(timer);
