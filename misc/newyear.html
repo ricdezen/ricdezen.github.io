@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>New Year's eve</title>
+    <link rel="stylesheet" href="newyear.css">
+</head>
+
+<body>
+    <script src="newyear.js" defer></script>
+    <div id="parallax-container" class="container parallax">
+        <div class="flex-container">
+            <div class="child">
+                <div class="counter" id="days"></div>
+                <div class="label">DAYS</div>
+            </div>
+            <div class="child">
+                <div class="counter" id="hours"></div>
+                <div class="label">HOURS</div>
+            </div>
+            <div class="child">
+                <div class="counter" id="minutes"></div>
+                <div class="label">MINUTES</div>
+            </div>
+            <div class="child">
+                <div class="counter" id="seconds"></div>
+                <div class="label">SECONDS</div>
+            </div>
+        </div>
+    </div>
+    <div class="inputs">
+        <div class="input" id="songbutton">
+            <div class="input-header input-child"><img class="icon" src="song.svg" /></div>
+            <div class="songfile input-child">
+                <input class="inputfile" id="songfile" type="file" name="songfile" />
+                <label class="button" for="songfile">
+                    <img class="icon" src="upload.svg" />
+                </label>
+            </div>
+            <div class="input-desc input-child" id="song-desc">
+                Select a File.
+            </div>
+        </div>
+        <div class="input" id="imagebutton">
+            <div class="input-header input-child"><img class="icon" src="image.svg" /></div>
+            <div class="imagefile input-child">
+                <input class="inputfile" id="imagefile" type="file" name="imagefile" />
+                <label class="button" for="imagefile">
+                    <img class="icon" src="upload.svg" />
+                </label>
+            </div>
+            <div class="input-desc input-child" id="image-desc">
+                Select a File.
+            </div>
+        </div>
+        <div class="input" id="offsetbutton">
+            <div class="input-header input-child"><img class="icon" src="timer.svg" /></div>
+            <div class="offset input-child">
+                <input type="number" id="offset" name="offset" min="0" />
+            </div>
+            <div class="input-desc input-child" id="offset-desc">
+                seconds before 0.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
