@@ -27,6 +27,14 @@ html, body {
     box-shadow: 0px 4px 16px 4px rgba(0,0,0,0.3);
 }
 
+.spectrum {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 57vw !important;
+}
+
 .flex-container {
     align-items: center;
     height: 100%;
