@@ -17,7 +17,7 @@ var remaining = 0;
 var timer = null;
 
 // Spectrum visualizer.
-var spectrum = new Spectrum(64);
+var spectrum = new Spectrum("spectrum", 64);
 
 /**
  * Callback for song file selection.

@@ -3,13 +3,24 @@
  */
 class Spectrum {
 
-    constructor(/*id,*/ bands = 64) {
-        // ! Switch this out for something else.
-        this.width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-        this.height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    /**
+     * Constructor for class.
+     * @param id String id for container html element.
+     * @param bands Number of frequency bands to display.
+     * @param height Height of the canvas. Default is window height.
+     * @param width Width of the canvas. Default is window width.
+     */
+    constructor(id, bands = 64, height, width) {
+        if (width == null)
+            this.width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        else
+            this.width = width;
+        if (height == null)
+            this.height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        else
+            this.height = height;
 
-        // ! Specify interface and container.
-        this.p5lib = new p5(this.makeSeed());
+        this.p5lib = new p5(this.makeSeed(), id);
         this.bands = bands;
 
         // 0 smoothing, we will handle it ourselves.
