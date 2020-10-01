@@ -4,27 +4,23 @@
 class Spectrum {
 
     /**
-     * Constructor for class.
+     * Constructor for class. The internal canvas is 1080 by 1080 by default.
+     * Needs to be squared for proper visualization.
+     * Resize it as needed or tweak the css of the parent element.
+     * 
      * @param id String id for container html element.
      * @param bands Number of frequency bands to display.
-     * @param height Height of the canvas. Default is window height.
-     * @param width Width of the canvas. Default is window width.
+     * @param size Size of the canvas. Default is 1080.
      */
-    constructor(id, bands = 64, height, width) {
-        if (width == null)
-            this.width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-        else
-            this.width = width;
-        if (height == null)
-            this.height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-        else
-            this.height = height;
+    constructor(id, bands = 87, size = 1080) {
+        this.width = size;
+        this.height = size;
 
         this.p5lib = new p5(this.makeSeed(), id);
         this.bands = bands;
 
         // 0 smoothing, we will handle it ourselves.
-        this.fft = new p5.FFT(0);
+        this.fft = new p5.FFT(0.2);
 
         // Wether the source is playing.
         this.playing = false;
@@ -32,6 +28,15 @@ class Spectrum {
         this.ready = false;
         // Audio source.
         this.source = null;
+
+        // Counter for frame. Determines rotation angle.
+        this.frame_count = 0;
+        // Rotation speed in degrees per frame.
+        this.speed = 1;
+
+        this.intensities = new Array(this.bands);
+        this.maxIntensity = 255 * 255;
+        this.minIntensity = this.maxIntensity * 0.1;
     }
 
     /**
@@ -47,32 +52,39 @@ class Spectrum {
                 sketch.colorMode(sketch.RGB, 255, 255, 255, 255);
                 sketch.stroke(255, 255, 255, 100);
 
-                // ! Get rid of this, find parent size some way.
-                this.canvas.class("spectrum");
+                // Angle between bands to make a circle.
+                this.band_angle = sketch.TWO_PI / this.bands;
+                // ! Change this
+                this.baseRadius = sketch.height / 4;
+                this.freqSensitivity = 0.5;
+                this.bandMaxH = (sketch.height / 2 - this.baseRadius) * this.freqSensitivity;
+
             };
 
             sketch.draw = () => {
                 if (!this.playing)
                     return;
                 sketch.clear();
-                let bandW = this.canvas.width / this.bands;
-                let bandMaxH = this.canvas.height * 0.6;
+                // ! Update drawing pos.
+                this.frame_count = (this.frame_count + this.speed) % (360)
+
+                sketch.translate(sketch.width / 2, sketch.height / 2);
+
+                // Change both.
+                let bandW = 10;
                 sketch.strokeWeight(bandW * 0.66);
-                let leftOffset = bandW / 2;
                 if (this.playing) {
-                    let spectrum = this.fft.analyze();
+                    let intensities = this.fft.analyze();
                     for (let i = 0; i < this.bands; i++) {
-                        let amp = spectrum[i];
-                        if (amp == 0)
-                            continue;
-                        let x = sketch.map(i, 0, this.bands, 0, this.canvas.width);
-                        let y = sketch.map(amp, 0, 255, 0, bandMaxH);
+                        let amp = intensities[i] * intensities[i];
+                        let y = sketch.map(amp, 0, this.maxIntensity, 0, this.bandMaxH);
                         sketch.line(
-                            x + leftOffset,
-                            this.canvas.height,
-                            x + leftOffset,
-                            this.canvas.height - y
+                            0,
+                            this.baseRadius - y / 2,
+                            0,
+                            this.baseRadius + y / 2
                         );
+                        sketch.rotate(this.band_angle);
                     }
                 }
             };
