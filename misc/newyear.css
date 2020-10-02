@@ -158,6 +158,15 @@ input[type=number] {
 }
 
 
+@media screen and (max-width: 100vh) {
+    .spectrum canvas {
+        margin: auto;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
 @media screen and (max-width: 800px) {
     .flex-container, .parallax {
         width: 100%;
