@@ -29,14 +29,18 @@ class Spectrum {
         // Audio source.
         this.source = null;
 
-        // Counter for frame. Determines rotation angle.
+        // Variable to determine base drawing angle.
         this.baseAngle = 0;
         // Rotation speed in degrees per frame.
         this.speed = 0.3;
 
+        // Array to hold the intensities.
         this.intensities = new Array(this.bands);
+        // Max allowed intensity.
         this.maxIntensity = 255 * 255;
-        this.minIntensity = this.maxIntensity * 0.1;
+
+        // Radius on previous frame, used when smoothing.
+        this.ampSmooth = 0.2;
     }
 
     /**
@@ -53,11 +57,14 @@ class Spectrum {
                 sketch.stroke(255, 255, 255, 100);
 
                 // Angle between bands to make a circle.
-                this.band_angle = sketch.TWO_PI / this.bands;
-                // ! Change this
-                this.baseRadius = sketch.height / 4;
-                this.freqSensitivity = 0.5;
-                this.bandMaxH = (sketch.height / 2 - this.baseRadius) * this.freqSensitivity;
+                this.bandAngle = sketch.TWO_PI / this.bands;
+
+                // Diameter ranges from 0.33 to 0.66 of the sketch size.
+                this.baseRadius = sketch.height * 0.33 / 2;
+                this.maxRadius = sketch.height * 0.66 / 2;
+                this.lastRadius = this.baseRadius;
+                // Bands can at most fill up the remaining space.
+                this.bandMaxH = (sketch.height / 2 - this.maxRadius);
 
             };
 
@@ -65,7 +72,7 @@ class Spectrum {
                 if (!this.playing)
                     return;
                 sketch.clear();
-                // ! Update drawing pos.
+
                 this.baseAngle += this.speed;
                 sketch.translate(sketch.width / 2, sketch.height / 2);
                 sketch.rotate(sketch.radians(this.baseAngle));
@@ -75,16 +82,30 @@ class Spectrum {
                 sketch.strokeWeight(bandW * 0.66);
                 if (this.playing) {
                     let intensities = this.fft.analyze();
+
+                    // Radius based on average amplitude.
+                    let ampSum = 0;
+                    let ampAvg = 0;
+                    let wave = this.fft.waveform();
+                    for (let i = 0; i < this.bands; i++)
+                        ampSum += wave[i];
+                    ampAvg = ampSum / this.bands;
+                    // Actual radius.
+                    let radius = sketch.map(ampAvg, -1, 1, this.baseRadius, this.maxRadius);
+                    // Smoothing.
+                    radius = this.lastRadius + (radius - this.lastRadius) * this.ampSmooth;
+                    this.lastRadius = radius;
+                    
                     for (let i = 0; i < this.bands; i++) {
                         let amp = intensities[i] * intensities[i];
                         let y = sketch.map(amp, 0, this.maxIntensity, 0, this.bandMaxH);
                         sketch.line(
                             0,
-                            this.baseRadius - y / 2,
+                            radius - y / 2,
                             0,
-                            this.baseRadius + y / 2
+                            radius + y / 2
                         );
-                        sketch.rotate(this.band_angle);
+                        sketch.rotate(this.bandAngle);
                     }
                 }
             };
