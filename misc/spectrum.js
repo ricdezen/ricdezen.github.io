@@ -30,9 +30,9 @@ class Spectrum {
         this.source = null;
 
         // Counter for frame. Determines rotation angle.
-        this.frame_count = 0;
+        this.baseAngle = 0;
         // Rotation speed in degrees per frame.
-        this.speed = 1;
+        this.speed = 0.3;
 
         this.intensities = new Array(this.bands);
         this.maxIntensity = 255 * 255;
@@ -66,9 +66,9 @@ class Spectrum {
                     return;
                 sketch.clear();
                 // ! Update drawing pos.
-                this.frame_count = (this.frame_count + this.speed) % (360)
-
+                this.baseAngle += this.speed;
                 sketch.translate(sketch.width / 2, sketch.height / 2);
+                sketch.rotate(sketch.radians(this.baseAngle));
 
                 // Change both.
                 let bandW = 10;
