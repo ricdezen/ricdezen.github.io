@@ -3,4 +3,6 @@
 _site
 _site/
 
+_posts/*draft.md
+
 .vscode/

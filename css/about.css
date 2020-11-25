@@ -1,11 +1,14 @@
 @import "const.css";
 
 .about-container {
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
     min-height: 200px;
 }
 
 .propic-container {
+    flex-basis: 150px;
     width: auto;
     float: left;
     position: relative;
@@ -20,7 +23,12 @@
 }
 
 @media screen and (max-width: 800px) {
+    .about-container {
+        flex-wrap: wrap;
+    }
+
     .propic-container {
         width: 100%;
+        flex-basis: 100%;
     }
 }

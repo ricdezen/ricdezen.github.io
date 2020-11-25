@@ -1,11 +1,12 @@
 @import "const.css";
 @import "navbar.css";
 @import "timeline.css";
-@import "propic.css";
+@import "about.css";
 @import "social.css";
 @import "blog.css";
 @import "projects.css";
 @import "syntax.css";
+@import "markdown.css";
 
 a {
     text-decoration: none;

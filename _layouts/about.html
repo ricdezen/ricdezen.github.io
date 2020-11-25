@@ -5,14 +5,19 @@ layout: default
 <div class="about-container">
     <div class="propic-container">
         <img src="/assets/martora.jpg" class="propic" />
-        <div
-            style="background-color: white; margin-top: -50px; position: absolute; left: 50%; transform: translateX(-50%);">
-            [Placeholder]</div>
     </div>
-    {{ content }}
+    <div class="quote-container">
+        {% for quote in site.data.quotes %}
+        <blockquote>
+        {{ quote.quote }}
+        </blockquote>
+        - {{ quote.author }}
+        {% endfor %}
+    </div>
 </div>
+{{ content }}
 <div class="timeline-container">
-    <h1>Timeline</h1>
+    <h1>Relevant life events</h1>
     <ul class="timeline">
         {% for event in site.data.roadmap.roadmap %}
         <li class="event">
