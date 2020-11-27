@@ -3,5 +3,3 @@ pages:
     url: "/about.html"
   - name: "Blog"
     url: "/blog/index.html"
-  - name: "Projects"
-    url: "/projects.html"
