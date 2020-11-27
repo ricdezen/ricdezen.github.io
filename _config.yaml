@@ -20,6 +20,8 @@ paginate_path: "/blog/page:num/"
 # Exclude files
 exclude:
   - _posts/*draft.md
+  - Gemfile
+  - Gemfile.lock
 
 # Markdown
 markdown: kramdown
