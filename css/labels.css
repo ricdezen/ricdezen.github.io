@@ -1,20 +1,39 @@
-.label {
+.label-beginner {
+    background-color: #0088cc;
+    margin: 0.125em;
     font-size: 0.8125em;
     color: #ffffff;
-    background-color: #0088cc;
     font-weight: bold;
     padding: 0.25em 0.5em;
-    border-radius: 0.0725em;
+    border-radius: 0.5em;
 }
 
-.label-success {
+.label-easy {
     background-color: #377f31;
+    margin: 0.125em;
+    font-size: 0.8125em;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
 }
 
-.label-danger {
+.label-advanced {
     background-color: #880e14;
+    margin: 0.125em;
+    font-size: 0.8125em;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
 }
 
-.label-warning {
+.label-intermediate {
     background-color: #dba909;
+    margin: 0.125em;
+    font-size: 0.8125em;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
 }

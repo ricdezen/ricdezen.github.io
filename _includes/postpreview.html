@@ -1,8 +1,10 @@
 <a href="{{ post.url }}">
     <div class="post-container">
         <h1 class="post-title">{{ post.title }}</h1>
-        {% include beginner_label.html %}
         <div class="post-date">{{ post.date | date_to_long_string }}</div>
+        {% for c in post.categories %}
+            {% include {{c}}_label.html %}
+        {% endfor %}
         <div class="post-excerpt">{{ post.excerpt }}</div>
         <div class="keep-reading">...</div>
     </div>
