@@ -3,14 +3,7 @@ title: Blog
 layout: default
 ---
 {% for post in paginator.posts %}
-<a href="{{ post.url }}">
-    <div class="post-container">
-        <h1 class="post-title">{{ post.title }}</h1>
-        <div class="post-date">{{ post.date | date_to_long_string }}</div>
-        <div class="post-excerpt">{{ post.excerpt }}</div>
-        <div class="keep-reading">...</div>
-    </div>
-</a>
+    {% include postpreview.html %}
 {% endfor %}
 
 <!-- Pagination links -->
