@@ -3,16 +3,16 @@ title: About
 layout: default
 ---
 <div class="about-container">
-    <div class="propic-container">
-        <img src="/assets/martora.jpg" class="propic" />
-    </div>
+    <img src="/assets/martora.jpg" class="propic" />
     <div class="quote-container">
-        {% for quote in site.data.quotes %}
-        <blockquote>
-        {{ quote.quote }}
-        </blockquote>
-        - {{ quote.author }}
-        {% endfor %}
+        <div>
+            {% for quote in site.data.quotes %}
+            <blockquote>
+            {{ quote.quote }}
+            </blockquote>
+            - {{ quote.author }}
+            {% endfor %}
+        </div>
     </div>
 </div>
 {{ content }}

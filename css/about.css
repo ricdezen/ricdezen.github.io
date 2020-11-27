@@ -5,17 +5,17 @@
     flex-wrap: nowrap;
     width: 100%;
     min-height: 200px;
+    align-items: center;
 }
 
-.propic-container {
-    flex-basis: 150px;
-    width: auto;
-    float: left;
-    position: relative;
-    text-align: center;
+.quote-container {
+    display: flex;
+    align-items: center;
 }
 
 .propic {
+    display: block;
+    flex-basis: 150px;
     border-radius: 50%;
     width: 150px;
     height: 150px;
