@@ -1,8 +1,14 @@
+# Jekyll cache and website preview.
 .jekyll-cache
 .jekyll-cache/
 _site
 _site/
 
+# Post drafts.
 _posts/*draft.md
 
+# VSCode stuff.
 .vscode/
+
+# Script to start the web-server preview.
+start.bat

@@ -14,11 +14,14 @@ figure {
     margin: 0;
     padding: 0;
 }  
-  
+
 .language-plaintext {
-    border-radius: 2px;
     padding: 2px;
-    background-color: rgba(27,31,35,.05);
+}
+  
+.highlighter-rouge {
+    border-radius: 4px;
+    background-color: #f6f8fa;
 }
 
 .highlight {
@@ -28,9 +31,8 @@ figure {
 
 pre.highlight {
     margin: 0;
-    padding: 0.8em;
+    padding: 1em;
     border-radius: 6px;
-    background-color: #f6f8fa;
 }
 
 .highlight .hll { background-color: #ffffcc }
