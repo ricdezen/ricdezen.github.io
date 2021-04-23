@@ -27,8 +27,9 @@
         flex-wrap: wrap;
     }
 
-    .propic-container {
-        width: 100%;
-        flex-basis: 100%;
+    .propic {
+        height: auto;
+        flex-basis: 50%;
+        margin: auto;
     }
 }
