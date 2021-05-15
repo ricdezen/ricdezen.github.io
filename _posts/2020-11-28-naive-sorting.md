@@ -123,7 +123,7 @@ $$c = (n - 1) + (n - 2) + ... + 1$$
 
 $$c = 1 + ... + (n - 2) + (n - 1)$$
 
-Which corresponds to a [famous geometric series](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF):
+Which corresponds to a [famous series](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF):
 
 $$\sum^{m}_{k=1}{k} = \frac{m(m+1)}{2}$$
 
