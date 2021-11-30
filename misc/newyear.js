@@ -39,6 +39,7 @@ function loadSong(event) {
  */
 function loadOffset(event) {
     beforeZero = document.getElementById("offset").value;
+    // Song may need to be played again from another timestamp.
     spectrum.stop();
 }
 
@@ -83,7 +84,7 @@ function updateTimer() {
 }
 
 /**
- * Set the update interval to 1 second.
+ * Update the timers every 1000 milliseconds.
  */
 function main() {
     // Repeat every second
@@ -97,9 +98,10 @@ document.getElementById("imagefile").addEventListener("change", loadBackground);
 // Reload offset.
 document.getElementById("offset").addEventListener("change", loadOffset);
 
-// First run
+// First run, set everything up.
 updateTimer();
-// Sync to second.
+
+// Roughly wait until the next second before starting the update loop.
 var now = Date.now();
 var delta = now - Math.floor(now / 1000) * 1000;
 setTimeout(main, delta);
