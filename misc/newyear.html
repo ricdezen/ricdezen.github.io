@@ -13,8 +13,10 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/addons/p5.sound.js"></script>
     <script src="spectrum.js" defer></script>
     <script src="newyear.js" defer></script>
+    <!-- Background image is a fixed background while the rest of the page scrolls. -->
     <div id="parallax-container" class="container parallax">
         <div class="flex-container">
+            <!-- Four values for the remaining time until next new year's -->
             <div class="child">
                 <div class="counter" id="days"></div>
                 <div class="label">DAYS</div>
@@ -33,6 +35,7 @@
             </div>
         </div>
     </div>
+    <!-- Here are the three buttons to set background, song, and song start time -->
     <div class="inputs">
         <div class="input" id="songbutton">
             <div class="input-header input-child"><img class="icon" src="song.svg" /></div>
@@ -68,6 +71,7 @@
             </div>
         </div>
     </div>
+    <!-- This is the audio spectrum visualizer -->
     <div id="spectrum" class="spectrum">
     </div>
 </body>
