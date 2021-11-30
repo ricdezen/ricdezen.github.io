@@ -66,6 +66,7 @@ function updateTimer() {
     let hours = Math.floor(minutes / 60);
     let days = Math.floor(hours / 24);
 
+    // Play the song if the time has come.
     if (seconds <= beforeZero)
         spectrum.play(beforeZero - seconds);
 
@@ -79,6 +80,7 @@ function updateTimer() {
     document.getElementById("seconds").innerHTML = seconds;
     document.getElementById("left").innerHTML = (remaining - beforeZero) + " remaining.";
 
+    // Avoid going to negative time when midnight passes.
     if (remaining == 0)
         clearInterval(timer);
 }
