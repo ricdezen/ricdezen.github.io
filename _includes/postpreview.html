@@ -3,7 +3,15 @@
         <h1 class="post-title">{{ post.title }}</h1>
         <div class="post-date">{{ post.date | date_to_long_string }}</div>
         {% for c in post.categories %}
-            <span class="label-base" style="background-color: #0088cc;">{{c | capitalize}}</span>
+            {% assign color = "000000" %}
+            {% for label in site.data.labels %}
+                {% if label.name == c %}
+                    {% assign color = label.color %}
+                {% endif %}
+            {% endfor %}
+            <span class="label-base" {{ 'style="background-color:'| append: color | append: ';"' }}>
+                {{c | capitalize}}
+            </span>
         {% endfor %}
         <div class="post-excerpt">{{ post.excerpt }}</div>
         <div class="keep-reading">...</div>
