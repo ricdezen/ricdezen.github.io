@@ -2,8 +2,10 @@
 title: About
 layout: about
 ---
-I believe it is useless to point this out. But I am not a Marten.
-I am just too lazy to take a good picture of myself. Believe me when I say it is
-no trivial task.
+*I have been told in the past that putting famous quotes in your bio looks
+pretentious, especially when you are basically, well, not famous. I consider
+this to be appropriate, because I pretend to be fine all the time.*
 
-Hello, this is me, and here info about me will come around eventually.
+Hello, my name is Riccardo. I am a Computer Engineering student from Italy. I like coding, electronics, artificial intelligence and why not, throw some videogames into the mix. I am keeping this small portfolio in hopes it gives me some extra motivation for when I develop small projects during my spare time.
+
+Hasn't really done it for me yet.
