@@ -3,7 +3,7 @@
         <h1 class="post-title">{{ post.title }}</h1>
         <div class="post-date">{{ post.date | date_to_long_string }}</div>
         {% for c in post.categories %}
-            {% include {{c}}_label.html %}
+            <span class="label-base" style="background-color: #0088cc;">{{c | capitalize}}</span>
         {% endfor %}
         <div class="post-excerpt">{{ post.excerpt }}</div>
         <div class="keep-reading">...</div>

@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 
-{% include head.html %}
+{% render "head.html" %}
 
 <body>
-    {% include header.html %}
+    {% render "header.html" %}
     <div class="content">
         {{ content }}
     </div>
-    {% include footer.html %}
+    {% render "footer.html" %}
 </body>
 
 </html>
