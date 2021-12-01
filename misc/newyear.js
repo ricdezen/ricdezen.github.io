@@ -24,10 +24,10 @@ const spectrum = new Spectrum("spectrum", 64);
 const fireworks = new Fireworks(fireworksContainer, {});
 
 // Load Fireworks settings.
-fetch("fireworks-config.json").then((res) => {
-    fireworks.setOptions(res.json());
+fetch("fireworks-config.json").then(res => res.json()).then(json => {
+    fireworks.setOptions(json);
     fireworks.start();
-})
+});
 
 /**
  * Callback for song file selection.
