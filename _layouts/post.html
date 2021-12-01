@@ -4,6 +4,6 @@ layout: default
 <h1 class="post-title">{{ page.title }}</h1>
 <div class="post-date">{{ page.date | date_to_long_string }}</div>
 {% for c in page.categories %}
-    {% include {{c}}_label.html %}
+    <span class="label-base" style="background-color: #0088cc;">{{c | capitalize}}</span>
 {% endfor %}
 {{ content }}

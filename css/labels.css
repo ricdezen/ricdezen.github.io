@@ -1,35 +1,4 @@
-.label-beginner {
-    background-color: #0088cc;
-    margin: 0.125em;
-    font-size: 0.8125em;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 0.25em 0.5em;
-    border-radius: 0.5em;
-}
-
-.label-easy {
-    background-color: #377f31;
-    margin: 0.125em;
-    font-size: 0.8125em;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 0.25em 0.5em;
-    border-radius: 0.5em;
-}
-
-.label-advanced {
-    background-color: #880e14;
-    margin: 0.125em;
-    font-size: 0.8125em;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 0.25em 0.5em;
-    border-radius: 0.5em;
-}
-
-.label-intermediate {
-    background-color: #dba909;
+.label-base {
     margin: 0.125em;
     font-size: 0.8125em;
     color: #ffffff;
