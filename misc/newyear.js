@@ -1,6 +1,7 @@
 // Viewport width and height for canvas size.
 const VW = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const VH = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+const fireworksContainer = document.getElementById('fireworks-container');
 
 // Format String for new year's date.
 var newYearStr = "1 January YEAR";
@@ -17,7 +18,15 @@ var remaining = 0;
 var timer = null;
 
 // Spectrum visualizer.
-var spectrum = new Spectrum("spectrum", 64);
+const spectrum = new Spectrum("spectrum", 64);
+
+// Fireworks.
+const fireworks = new Fireworks(fireworksContainer, {});
+
+// Load Fireworks settings.
+fetch("fireworks-config.json").then((res) => {
+    fireworks.setOptions(res.json());
+})
 
 /**
  * Callback for song file selection.
@@ -81,8 +90,11 @@ function updateTimer() {
     document.getElementById("left").innerHTML = (remaining - beforeZero) + " remaining.";
 
     // Avoid going to negative time when midnight passes.
-    if (remaining == 0)
+    if (remaining == 0) {
         clearInterval(timer);
+        fireworks.start();
+    }
+        
 }
 
 /**

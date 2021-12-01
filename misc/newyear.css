@@ -43,6 +43,16 @@ html, body {
     height: 100% !important;
 }
 
+.fireworks-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+}
+
 .flex-container {
     align-items: center;
     height: 100%;
