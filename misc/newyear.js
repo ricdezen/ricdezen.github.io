@@ -119,3 +119,5 @@ updateTimer();
 var now = Date.now();
 var delta = now - Math.floor(now / 1000) * 1000;
 setTimeout(main, delta);
+
+fireworks.start();
