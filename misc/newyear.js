@@ -26,6 +26,7 @@ const fireworks = new Fireworks(fireworksContainer, {});
 // Load Fireworks settings.
 fetch("fireworks-config.json").then((res) => {
     fireworks.setOptions(res.json());
+    fireworks.start();
 })
 
 /**
@@ -119,5 +120,3 @@ updateTimer();
 var now = Date.now();
 var delta = now - Math.floor(now / 1000) * 1000;
 setTimeout(main, delta);
-
-fireworks.start();
