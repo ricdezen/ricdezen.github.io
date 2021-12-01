@@ -26,7 +26,6 @@ const fireworks = new Fireworks(fireworksContainer, {});
 // Load Fireworks settings.
 fetch("fireworks-config.json").then(res => res.json()).then(json => {
     fireworks.setOptions(json);
-    fireworks.start();
 });
 
 /**
