@@ -1,20 +1,29 @@
 <nav class="navbar">
     {% for item in site.data.pages.pages %}
-    <div class="dropdown">
-        {% if item.url %}
-        <a class="navlink" href="{{ item.url | relative_url}}">
+        {% if item.name == page.title %}
+            <div class="navitem">
+                <button class="navbutton-current full-rounded">
+                    {{ item.name }}
+                </button>
+            </div>
+        {% else %}
+            {% if item.sub %}
+            <!-- Missing dropdown menu implementation -->
+            {% else %}
+            <div class="navitem">
+                {% if item.url %}
+                    <a class="navlink" href="{{ item.url | relative_url }}">
+                {% endif %}
+
+                <button class="navbutton full-rounded">
+                    {{ item.name }}
+                </button>
+
+                {% if item.url %}
+                    </a>
+                {% endif %}
+            </div>
+            {% endif %}
         {% endif %}
-        <button class="navbutton {% if item.sub %}submenu-button{% else %}full-rounded{% endif %}">
-            {{ item.name }}
-        </button>
-        {% if item.url %}</a>{% endif %}
-        {% if item.sub %}
-        <div class="dropdown-content">
-            {% for s in item.sub %}
-            <a href="#">{{ s.name }}</a>
-            {% endfor %}
-        </div>
-        {% endif %}
-    </div>
     {% endfor %}
 </nav>
