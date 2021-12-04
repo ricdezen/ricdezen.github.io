@@ -26,10 +26,11 @@
     padding: 12px;
     font-size: 16px;
     border: none;
-    cursor: none;
+    cursor: default;
     text-decoration: none;
     color: var(--light-gray);
     background-color: var(--color-primary);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
 }
 
 .full-rounded {
