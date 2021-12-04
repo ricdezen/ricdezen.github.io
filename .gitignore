@@ -12,3 +12,6 @@ _posts/*draft.md
 
 # Script to start the web-server preview.
 start.bat
+
+# Gemfile not needed
+Gemfile.lock
