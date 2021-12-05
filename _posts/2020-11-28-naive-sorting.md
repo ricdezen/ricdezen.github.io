@@ -4,13 +4,13 @@ categories: easy
 ---
 From my experience, many high school students seem to struggle with sorting algorithms. Some of them are easy, some of them not so much. I'd like to try and make them simple for students. I want to start from the simplest algorithm: Selection sort.
 
+<!-- more -->
+
 The situation of some high schoolers is unbelievable to me sometimes. This algorithm is as simple as it can get. Multiple times I have found students unable to comprehend it.
 
-I have to be honest. If you are supposed to know C/C++ or Python, you meet the theoretical prerequisites, and this is not clear to you by the end of this page, I cannot help you in any way, and neither can luck. If you are not in high school you may just be too young to grasp the logic: taking a few steps back and review some other concepts could prove useful. If you are in high school you may just be unsuited for logic in general, so you should reconsider your study choices.
+I have to be honest. If you are supposed to know C/C++ or Python, you meet the theoretical prerequisites, and this is not clear to you by the end of this page, I cannot help you in any way, and neither can luck. If you are not in high school you may just be too young to grasp the logic: taking a few steps back and reviewing some other concepts could prove useful. If you are in high school (and above) you may just be unsuited for logic itself.
 
 ## What you need to know
-
-First of all, kids always tend to wonder "*why would I ever need to know this?*". Let us say you are playing some game, and need to *sort* your inventory. That's it, that's the answer.
 
 Sorting is a problem that can be solved in many ways. Some can be used all the time, while others have some requirements.
 

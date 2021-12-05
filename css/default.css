@@ -14,6 +14,11 @@ a {
     color: var(--color-primary);
 }
 
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 body {
     width: 640px;
     margin-left: auto;

@@ -2,9 +2,8 @@
 
 .timeline {
     border-left: 4px solid var(--color-primary);
-    width: 100%;
-    position: relative;
     list-style: none;
+    width: 100%;
     padding: 16px;
 }
 

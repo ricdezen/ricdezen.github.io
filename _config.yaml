@@ -17,6 +17,9 @@ author:
 paginate: 5
 paginate_path: "/blog/page:num/"
 
+# Excerpt separator
+excerpt_separator: "<!-- more -->"
+
 # Exclude files
 exclude:
   - _posts/*draft.md
