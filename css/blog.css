@@ -5,10 +5,7 @@
     background-color: transparent;
     border-radius: 16px;
     margin-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 1px;
-    padding-bottom: 16px;
+    padding: 1px 16px 16px 16px;
     color: var(--text-color);
 }
 
