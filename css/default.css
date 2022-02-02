@@ -8,6 +8,7 @@
 @import "syntax.css";
 @import "markdown.css";
 @import "labels.css";
+@import "math.css";
 
 a {
     text-decoration: none;

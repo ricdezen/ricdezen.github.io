@@ -1,6 +1,14 @@
 @import "const.css";
 
 .post-container {
+    background-color: transparent;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    padding: 1px 16px 16px 16px;
+    color: var(--text-color);
+}
+
+.post-container-preview {
     transition: background-color 0.25s, box-shadow 0.25s;
     background-color: transparent;
     border-radius: 16px;
@@ -9,7 +17,7 @@
     color: var(--text-color);
 }
 
-.post-container:hover {
+.post-container-preview:hover {
     background-color: var(--light-gray);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
 }
