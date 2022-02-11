@@ -37,7 +37,7 @@ function loadSong(event) {
     spectrum.changeSource(
         URL.createObjectURL(file),
         function () {
-            document.getElementById("song-desc").innerHTML = file.name;
+            document.getElementById("song-desc").textContent = file.name;
         }
     );
 }
@@ -61,7 +61,7 @@ function loadBackground(event) {
         let file = event.target.files[0];
         let url = URL.createObjectURL(file);
         document.getElementById("parallax-container").style.backgroundImage = "url(" + url + ")";
-        document.getElementById("image-desc").innerHTML = file.name;
+        document.getElementById("image-desc").textContent = file.name;
     }
 }
 
@@ -83,11 +83,11 @@ function updateTimer() {
     minutes -= hours * 60;
     hours -= days * 24;
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-    document.getElementById("left").innerHTML = (remaining - beforeZero) + " remaining.";
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+    document.getElementById("left").textContent = (remaining - beforeZero) + " remaining.";
 
     // Avoid going to negative time when midnight passes.
     if (remaining == 0) {
