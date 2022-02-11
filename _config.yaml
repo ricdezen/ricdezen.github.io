@@ -6,6 +6,8 @@ description: "Computer Engineering Student"
 url: "https://ricdezen.github.io"
 # Base url
 baseurl: "/"
+# Permalink of pages
+permalink: /blog/:categories/:year/:title:output_ext
 
 # Author information
 author:
