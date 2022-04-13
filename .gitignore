@@ -1,6 +1,7 @@
 # Jekyll cache and website preview.
 .jekyll-cache
 .jekyll-cache/
+.jekyll-metadata
 _site
 _site/
 

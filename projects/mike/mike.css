@@ -1,0 +1,149 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    scrollbar-width: none;
+    background-color: rgb(40, 44, 52);
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.flex-container {
+    transition: opacity 0.5s;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    opacity: 0;
+}
+
+.child {
+    color: rgb(203, 212, 227);
+    font-size: 6vw;
+    flex-grow: 1;
+    flex-basis: auto;
+    text-align: center;
+}
+
+/**
+ * Loading dots animation. Under MIT license from:
+ * https://nzbin.github.io/three-dots/
+ */
+
+.dot-container {
+    transition: opacity 0.5s;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.dot-elastic {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(203, 212, 227);
+    color: rgb(203, 212, 227);
+    animation: dotElastic 1s infinite linear;
+}
+
+.dot-elastic::before,
+.dot-elastic::after {
+    transition: opacity 0.5s;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.dot-elastic::before {
+    left: -4vw;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(203, 212, 227);
+    color: rgb(203, 212, 227);
+    animation: dotElasticBefore 1s infinite linear;
+}
+
+.dot-elastic::after {
+    left: 4vw;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(203, 212, 227);
+    color: rgb(203, 212, 227);
+    animation: dotElasticAfter 1s infinite linear;
+}
+
+@keyframes dotElasticBefore {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1, 1.5);
+    }
+
+    50% {
+        transform: scale(1, 0.67);
+    }
+
+    75% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes dotElastic {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 1.5);
+    }
+
+    75% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes dotElasticAfter {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 0.67);
+    }
+
+    75% {
+        transform: scale(1, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
