@@ -11,7 +11,7 @@ body {
 .flex-container {
     transition: opacity 0.5s;
     align-items: center;
-    height: 100vh;
+    height: 88vh;
     width: 50%;
     margin: auto;
     display: flex;
@@ -25,6 +25,55 @@ body {
     flex-grow: 1;
     flex-basis: auto;
     text-align: center;
+}
+
+/* Point field */
+
+.input-button {
+    transition: opacity 1s;
+    opacity: 0.1;
+    padding: 2vh;
+    width: fit-content;
+    margin: auto;
+}
+
+.input-button:hover {
+    opacity: 1;
+}
+
+.input-child {
+    vertical-align: middle;
+    color: rgb(203, 212, 227);
+    display: inline-block;
+    font-size: 5vh;
+}
+
+.input-desc {
+    padding-left: 2vw;
+}
+
+input[type=number] {
+    max-width: 12vw;
+    height: 8vh;
+    border-radius: 4vh;
+    color: rgb(203, 212, 227);
+    font-size: 5vh;
+    text-align: center;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(62, 66, 78);
+    background-color: rgb(40, 44, 52);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 /**

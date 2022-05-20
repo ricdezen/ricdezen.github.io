@@ -63,22 +63,39 @@ def enumerate_stats() -> list:
     return enumerate_rec(12, 0)
 
 
-def main():
+def get_random_for(n_points) -> list:
     # All possible ways to distribute stats.
     possible_allocations = enumerate_stats()
     # Filter for the ones that make 20 points.
-    valid_allocations = list(filter(
-        lambda x: eval_alloc(x) == 20, possible_allocations
-    ))
+    valid_allocations = [
+        x for x in possible_allocations if eval_alloc(x) == n_points
+    ]
+
     # Choose one and convert it to stats.
-    stats = alloc_to_stats(random.choice(valid_allocations))
+    return alloc_to_stats(random.choice(valid_allocations))
+
+
+def main(n_points):
+    stats = get_random_for(n_points)
 
     stat_divs = list(document.select(".stats"))
     for i, stat in enumerate(stats):
         stat_divs[i].text = stat
 
+    # Let stats appear.
     document.select(".dot-container")[0].style.opacity = "0"
     document.select(".flex-container")[0].style.opacity = "1"
 
 
-timer.set_timeout(main, 1000)
+def delay_main(n_points: int = 20):
+    # Let dots appear.
+    document.select(".flex-container")[0].style.opacity = "0"
+    document.select(".dot-container")[0].style.opacity = "1"
+    timer.set_timeout(lambda: main(n_points), 1000)
+
+
+document["n-points"].bind(
+    "change",
+    lambda e: delay_main(int(document["n-points"].value))
+)
+delay_main(20)
