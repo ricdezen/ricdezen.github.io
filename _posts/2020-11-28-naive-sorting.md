@@ -2,6 +2,7 @@
 title: "Naive sorting: Selection sort"
 categories: easy
 ---
+
 From my experience, many high school students seem to struggle with sorting algorithms. Some of them are easy, some of them not so much.
 I would like to try and make them simple for students. First: Selection Sort.
 
