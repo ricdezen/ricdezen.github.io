@@ -4,14 +4,57 @@ body {
     padding: 0px;
     width: 100%;
     scrollbar-width: none;
-    background-color: rgb(40, 44, 52);
     font-family: 'Trebuchet MS', sans-serif;
 }
+
+body[palette=dnd] {
+    background-color: rgb(117, 11, 11);
+}
+
+body[palette=pathfinder] {
+    background-color: rgb(40, 44, 52);
+}
+
+/* Tabs */
+
+.tab-container {
+    align-items: center;
+    height: 12vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tab {
+    transition: opacity 1s;
+    opacity: 0.1;
+    font-size: 5vh;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    border-radius: 2vh;
+}
+
+.tab:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tab[palette=dnd] {
+    color: rgb(255, 223, 207);
+}
+
+.tab[palette=pathfinder] {
+    color: rgb(203, 212, 227);
+}
+
+/* Scores */
 
 .flex-container {
     transition: opacity 0.5s;
     align-items: center;
-    height: 88vh;
+    height: 76vh;
     width: 50%;
     margin: auto;
     display: flex;
@@ -20,11 +63,18 @@ body {
 }
 
 .child {
-    color: rgb(203, 212, 227);
     font-size: 6vw;
     flex-grow: 1;
     flex-basis: auto;
     text-align: center;
+}
+
+.child[palette=dnd] {
+    color: rgb(255, 223, 207);
+}
+
+.child[palette=pathfinder] {
+    color: rgb(203, 212, 227);
 }
 
 /* Point field */
@@ -43,9 +93,16 @@ body {
 
 .input-child {
     vertical-align: middle;
-    color: rgb(203, 212, 227);
     display: inline-block;
     font-size: 5vh;
+}
+
+.input-child[palette=dnd] {
+    color: rgb(255, 223, 207);
+}
+
+.input-child[palette=pathfinder] {
+    color: rgb(203, 212, 227);
 }
 
 .input-desc {
@@ -56,14 +113,11 @@ input[type=number] {
     max-width: 12vw;
     height: 8vh;
     border-radius: 4vh;
-    color: rgb(203, 212, 227);
     font-size: 5vh;
     text-align: center;
     box-sizing: border-box;
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(62, 66, 78);
-    background-color: rgb(40, 44, 52);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -76,12 +130,25 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+input[palette=dnd] {
+    color: rgb(255, 223, 207);
+    background-color: rgb(117, 11, 11);
+    border-color: rgb(130, 44, 44);
+}
+
+input[palette=pathfinder] {
+    color: rgb(203, 212, 227);
+    background-color: rgb(40, 44, 52);
+    border-color: rgb(62, 66, 78);
+}
+
 /**
  * Loading dots animation. Under MIT license from:
  * https://nzbin.github.io/three-dots/
  */
 
 .dot-container {
+    z-index: -1;
     transition: opacity 0.5s;
     opacity: 1;
     align-items: center;
@@ -97,13 +164,23 @@ input[type=number] {
     width: 2vw;
     height: 2vw;
     border-radius: 1vw;
-    background-color: rgb(203, 212, 227);
-    color: rgb(203, 212, 227);
     animation: dotElastic 1s infinite linear;
+}
+
+.dot-elastic[palette=dnd] {
+    color: rgb(255, 223, 207);
+    background-color: rgb(255, 223, 207);
+}
+
+.dot-elastic[palette=pathfinder] {
+    color: rgb(203, 212, 227);
+    background-color: rgb(203, 212, 227);
 }
 
 .dot-elastic::before,
 .dot-elastic::after {
+    color: inherit;
+    background-color: inherit;
     transition: opacity 0.5s;
     content: '';
     display: inline-block;
@@ -116,8 +193,6 @@ input[type=number] {
     width: 2vw;
     height: 2vw;
     border-radius: 1vw;
-    background-color: rgb(203, 212, 227);
-    color: rgb(203, 212, 227);
     animation: dotElasticBefore 1s infinite linear;
 }
 
@@ -126,8 +201,6 @@ input[type=number] {
     width: 2vw;
     height: 2vw;
     border-radius: 1vw;
-    background-color: rgb(203, 212, 227);
-    color: rgb(203, 212, 227);
     animation: dotElasticAfter 1s infinite linear;
 }
 

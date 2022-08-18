@@ -12,37 +12,42 @@
     </script>
 </head>
 
-<body onload="brython(1)">
-    <div class="dot-container">
-        <div class="dot-elastic"></div>
+<body onload="brython(1)" palette="">
+    <div class="dot-container" palette="">
+        <div class="dot-elastic" palette=""></div>
+    </div>
+    <!-- Game tabs -->
+    <div class="tab-container" palette="">
+        <div class="tab" id="tab-pathfinder" palette="">Pathfinder</div>
+        <div class="tab" id="tab-dnd" palette="">D&D 5th edition</div>
     </div>
     <!-- Stat values -->
     <div class="flex-container">
-        <div class="child stats">
+        <div class="child stats" palette="">
             
         </div>
-        <div class="child stats">
+        <div class="child stats" palette="">
             
         </div>
-        <div class="child stats">
+        <div class="child stats" palette="">
             
         </div>
-        <div class="child stats">
+        <div class="child stats" palette="">
             
         </div>
-        <div class="child stats">
+        <div class="child stats" palette="">
             
         </div>
-        <div class="child stats">
+        <div class="child stats" palette="">
             
         </div>
     </div>
     <!-- Input field for number of points -->
     <div class="input-button">
-        <div class="input-child">
-            <input type="number" id="n-points" name="n-points" min="0" value="20"/>
+        <div class="input-child" palette="">
+            <input type="number" id="n-points" name="n-points" min="0" palette=""/>
         </div>
-        <div class="input-desc input-child">
+        <div class="input-desc input-child" palette="">
             Points
         </div>
     </div>
