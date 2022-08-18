@@ -1,2 +1,4 @@
 - name: easy
   color: green
+- name: intermediate
+  color: yellow
