@@ -5,5 +5,6 @@ layout: default
 
 # Home
 
-There is nothing here cause I am too lazy to put something.
-Also there isn't really anything to put.
+Insert super cool home page here.
+
+What do you mean we don't have one?
