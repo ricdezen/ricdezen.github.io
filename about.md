@@ -9,8 +9,8 @@ the time.*
 
 Hello, my name is Riccardo. I am a Computer Engineering student from Italy. I
 like coding, electronics, artificial intelligence, videogames, and I sometimes
-forget to mention tabletop RPGs. I am keeping this small portfolio in hopes it
-gives me some extra motivation for when I develop small projects during my spare
-time.
+forget to mention tabletop RPGs. I am keeping this small portfolio in hopes
+writing down my journey through my personal projects will improve my motivation.
 
-Hasn't really done it for me yet.
+Considering I think I posted around 0.1% of what I coded since opening
+this, I'd say it is not working.
