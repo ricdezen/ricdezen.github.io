@@ -1,0 +1,7 @@
+projects:
+  - name: "New Year's Eve"
+    url: "/projects/newyear/newyear.html"
+    description: "I failed to sync &quot;The Final Countdown&quot; one too many times."
+  - name: "Random RPG stats"
+    url: "/projects/mike/mike.html"
+    description: "If you need balanced dices I guess."

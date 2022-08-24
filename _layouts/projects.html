@@ -2,8 +2,15 @@
 title: Projects
 layout: default
 ---
-<div style="margin-top: 32px; width: 100%; text-align: center;">Sry mate, aint nobody here but us chickens.</div>
-<div class="proj-ph-container">
-    <iframe class="proj-placeholder" src="https://www.youtube.com/embed/HnyB0a8G71Y" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="projects-container">
+    {% for proj in site.data.projects.projects %}
+        <div class="project">
+            <a href="{{ proj.url }}">
+                <div class="project-card">
+                    <h4 class="project-title">{{ proj.name }}</h3>
+                    <div title="{{ proj.description }}" class="project-desc">{{ proj.description }}</div>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
 </div>
