@@ -7,8 +7,11 @@ layout: default
         <div class="project">
             <a href="{{ proj.url }}">
                 <div class="project-card">
-                    <h4 class="project-title">{{ proj.name }}</h3>
-                    <div title="{{ proj.description }}" class="project-desc">{{ proj.description }}</div>
+                    <img src="{{ proj.thumbnail }}" class="project-thumb"/>
+                    <div class="below-proj-thumb">
+                        <h4 class="project-title">{{ proj.name }}</h3>
+                        <div title="{{ proj.description }}" class="project-desc">{{ proj.description }}</div>
+                    </div>
                 </div>
             </a>
         </div>
