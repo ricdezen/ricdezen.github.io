@@ -80,7 +80,7 @@ not really exist.
 </div>
 ```
 
-> **WARNING**: In theory you should call your attribute something that starts with `data-`.
+> **WARNING**: In theory you should call your attribute something that starts with `data-`. It still seems to works with `palette`. Idk man ¯\\\_(ツ)\_/¯.
 
 And in CSS, you can query for attribute values.
 
