@@ -65,10 +65,10 @@ blue tones to Pathfinder in my head, so why not make everything red for D&D?
 I quickly realized that setting the style of every page element, one at a time,
 would have been insane, and definitely not reusable.
 
-I studied very few HTML and CSS back in high school, and to be fair, college
-courses just gave them for granted. Turns out my long term memory is quite
-solid, and I remembered two nice not so known features:
-[custom HTML attributes]() and [CSS attribute selectors]().
+I studied very few HTML and CSS back in high school, and I deemed related
+college courses a waste of credits. Something still clicked inside my small
+head, and I remembered two not so known features:
+[custom HTML attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) and [CSS attribute selectors](https://www.w3schools.com/css/css_attribute_selectors.asp).
 
 Basically, you can add any attribute to an HTML tag, even if such attribute does
 not really exist.
@@ -79,6 +79,8 @@ not really exist.
             
 </div>
 ```
+
+> **WARNING**: In theory you should call your attribute something that starts with `data-`.
 
 And in CSS, you can query for attribute values.
 
